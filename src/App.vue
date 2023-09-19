@@ -1,10 +1,7 @@
 <script setup lang="ts">
-// import HelloWorld from './components/HelloWorld.vue'
-// import { FoodData } from "./interface/FoodData.ts";
 import { useFoodData } from './hooks/useFoodData';
 import Card from './components/card/Card.vue';
 
-// const data: FoodData[] = [];
 const { data } = useFoodData();
 
 </script>
@@ -17,7 +14,6 @@ const { data } = useFoodData();
         :image="foodData.image" />
     </div>
   </div>
-  <!--<HelloWorld msg="Vite + Vue" />-->
 </template>
 
 <style scoped></style>

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useFoodData } from './hooks/useFoodData';
 import Card from './components/card/Card.vue';
+import "./App.css";
 
 const { data } = useFoodData();
 

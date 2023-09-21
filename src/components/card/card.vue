@@ -1,8 +1,8 @@
 <template>
   <div class="card">
-    <img :src="image" />
-    <h2>{{ title }}</h2>
-    <p><b>Valor:</b>{{ price }}</p>
+    <img v-bind:src="$props.image" />
+    <h2>{{ $props.title }}</h2>
+    <p><b>Valor:</b>{{ $props.price }}</p>
   </div>
 </template>
 
@@ -11,20 +11,11 @@ import './card.css'
 
 export default {
   props: {
-    price: {
-      type: Number,
-      required: true
-    },
-    title: {
-      type: String,
-      required: true
-    },
-    image: {
-      type: String,
-      required: true
-    }
+    price: Number,
+    title: String,
+    image: String
   }
-}
+} 
 </script>
 
 <style></style>

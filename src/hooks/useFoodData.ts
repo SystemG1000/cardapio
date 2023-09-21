@@ -4,17 +4,24 @@ import { FoodData } from "../interface/FoodData";
 
 const API_URL = 'http://localhost:8080';
 
+/* const fetchData = async (): AxiosPromise<FoodData> => {
+  const response = axios.get(API_URL + '/food');
+  console.log(response)
+  console.log((await response).data)
+  return (await response).data;
+} */
+
+
 const fetchData = async (): AxiosPromise<FoodData> => {
   try {
-    const response = axios.get(API_URL + '/food');
-    return response;
+    const response = await axios.get<FoodData[]>(API_URL + '/food')
+    console.log((await response).data)
+    return (await response).data
   } catch (error) {
-    console.log("Erro ao capturar")
-    return Promise.reject(error);
+    console.log(error)
   } finally {
-    console.log("Busca encerrada")
+    console.log("Finish search")
   }
-
 }
 
 export function useFoodData() {

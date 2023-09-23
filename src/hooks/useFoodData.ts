@@ -4,15 +4,15 @@ import { FoodData } from "../interface/FoodData";
 
 const API_URL = 'http://localhost:8080';
 
-/* const fetchData = async (): AxiosPromise<FoodData> => {
-  const response = axios.get(API_URL + '/food');
-  console.log(response)
-  console.log((await response).data)
-  return (await response).data;
-} */
-
-
 const fetchData = async (): AxiosPromise<FoodData> => {
+  const response = axios.get(API_URL + '/food');
+  /* console.log(response)
+  console.log((await response).data) */
+  return (await response).data;
+}
+
+
+/* const fetchData = async (): AxiosPromise<FoodData> => {
   try {
     const response = await axios.get<FoodData[]>(API_URL + '/food')
     console.log((await response).data)
@@ -22,7 +22,7 @@ const fetchData = async (): AxiosPromise<FoodData> => {
   } finally {
     console.log("Finish search")
   }
-}
+} */
 
 export function useFoodData() {
   const query = useQuery({

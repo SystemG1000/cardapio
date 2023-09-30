@@ -1,5 +1,5 @@
 export interface FoodData {
-  id?: number, // ? => tornando o id opcional
+  id?: number,
   title: string,
   image: string,
   price: number

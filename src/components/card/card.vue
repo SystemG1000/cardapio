@@ -1,21 +1,20 @@
 <template>
   <div class="card">
-    <img v-bind:src="$props.image" />
-    <h2>{{ $props.title }}</h2>
-    <p><b>Valor:</b>{{ $props.price }}</p>
+    <img :src="image" />
+    <h2>{{ title }}</h2>
+    <p><b>{{ price }}</b></p>
   </div>
 </template>
 
 <script lang="ts">
-import './card.css'
-
 export default {
+  name: "Card",
   props: {
-    price: Number,
+    image: String,
     title: String,
-    image: String
-  }
-} 
+    price: Number,
+  },
+};
 </script>
 
 <style></style>

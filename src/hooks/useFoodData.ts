@@ -1,13 +1,13 @@
 import { useQuery } from '@tanstack/vue-query';
 import axios, { AxiosPromise } from "axios";
-import { FoodData } from "../interface/FoodData";
+import { FoodData } from "../interface/FoodData.vue";
 
 const API_URL = 'http://localhost:8080';
 
 const fetchData = async (): AxiosPromise<FoodData> => {
   try {
     const response = await axios.get(API_URL + '/food')
-    return response;
+    return response.data;
   } catch (error) {
     console.log("Erro ao utilizar API")
     return Promise.reject(error)
@@ -24,6 +24,6 @@ export function useFoodData() {
 
   return {
     ...query,
-    data: query.data ? query.data : "Error"
+    data: query.data 
   }
 }

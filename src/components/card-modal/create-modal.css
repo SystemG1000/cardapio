@@ -1,7 +1,7 @@
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0,0,0,0.4);
   overflow: hidden;
   height: 100vh;
   width: 100vw;
@@ -37,7 +37,7 @@
 .modal-overlay .modal-body input {
   padding: 12px;
   border: 2px solid #c6c5c5c5;
-  color: rgba(0, 0, 0, 0.9);
+  color: rgba(0,0,0,0.9);
   font-size: 18px;
   line-height: 24px;
   border-radius: 12px;

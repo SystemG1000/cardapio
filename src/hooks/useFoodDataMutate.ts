@@ -1,6 +1,7 @@
 import { useMutation, useQueryClient } from '@tanstack/vue-query';
 import axios, { AxiosPromise } from "axios";
-import { FoodData } from "../interface/FoodData";
+import { FoodData } from "../interface/FoodData.vue";
+
 
 const API_URL = 'http://localhost:8080';
 
